@@ -1,0 +1,13 @@
+.header__container {
+  background: #ff164e;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+}
+.header-label {
+  font-family: fantasy;
+  cursor: pointer;
+  text-align: center;
+}
