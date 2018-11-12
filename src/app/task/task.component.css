@@ -1,0 +1,30 @@
+.task_button {
+  margin: 4px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+.task_button__in_work:hover {
+  background: green;
+  box-shadow: 0 0 10px green;
+}
+.task_button__in_work {
+  background: lawngreen;
+}
+.task_button__done {
+  background: blue;
+}
+.task_button__done:hover {
+  background: darkblue;
+  box-shadow: 0 0 10px darkblue;
+}
+.task_label {
+  display: inline-block;
+  font-size: 24px;
+  margin-left: 15px;
+  vertical-align: top;
+}
+.tasl_label__done {
+  text-decoration:line-through
+}

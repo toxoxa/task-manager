@@ -1,4 +1,7 @@
 .header__container {
+  position: fixed;
+  width: 100%;
+  top: 0;
   background: #ff164e;
   color: #ffffff;
   font-size: 30px;
