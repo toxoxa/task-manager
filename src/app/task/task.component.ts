@@ -19,13 +19,14 @@ export class TaskComponent {
 
   @Input() text: string;
   @Input() done: boolean;
+  @Input() id: number;
 
   onClick() {
     if (this.done) {
       return;
     }
     this.done = true;
-    console.log(`task ${this.text} done`);
+    console.log(`task ${this.text} with id ${this.id} done`);
   }
 
 }

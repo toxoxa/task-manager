@@ -2,13 +2,30 @@
   <div [ngClass]="'taskboard__in_work'">
     <div [ngClass]="'taskboard__label'">В работе</div>
     <div [ngClass]="'taskboard__task_container'">
-      <ng-template ngFor let-job [ngForOf]="jobs">
-        <app-task [text]="job.text" [done]="job.done"></app-task>
+      <ng-template ngFor let-job [ngForOf]="jobsInWork">
+        <div *ngIf="!job.done">
+          <app-task
+            [text]="job.text"
+            [done]="job.done"
+            [id]="job.id"
+            (click)="onClick(job.id)">
+          </app-task>
+        </div>
       </ng-template>
     </div>
   </div>
   <div [ngClass]="'taskboard__done'">
     <div [ngClass]="'taskboard__label'">Выполненные</div>
-    <div [ngClass]="'taskboard__task_container'"></div>
+    <div [ngClass]="'taskboard__task_container'">
+      <ng-template ngFor let-job [ngForOf]="jobsDone">
+        <div *ngIf="job.done">
+          <app-task
+            [text]="job.text"
+            [done]="job.done"
+            [id]="job.id">
+          </app-task>
+        </div>
+      </ng-template>
+    </div>
   </div>
 </div>
