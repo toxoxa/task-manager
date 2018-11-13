@@ -1,3 +1,14 @@
-<p>
-  taskboard works!
-</p>
+<div [ngClass]="'taskboard__container'">
+  <div [ngClass]="'taskboard__in_work'">
+    <div [ngClass]="'taskboard__label'">В работе</div>
+    <div [ngClass]="'taskboard__task_container'">
+      <ng-template ngFor let-job [ngForOf]="jobs">
+        <app-task [text]="job.text" [done]="job.done"></app-task>
+      </ng-template>
+    </div>
+  </div>
+  <div [ngClass]="'taskboard__done'">
+    <div [ngClass]="'taskboard__label'">Выполненные</div>
+    <div [ngClass]="'taskboard__task_container'"></div>
+  </div>
+</div>

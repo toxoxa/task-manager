@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+// @NgModule({
+//   imports: [],
+//   exports: [TaskComponent],
+//   declarations: [TaskComponent],
+//   providers: [],
+// })
 
 @Component({
   selector: 'app-task',
@@ -10,10 +17,13 @@ export class TaskComponent {
   constructor() {
   }
 
-  text = 'Сделать дело, гулять смело';
-  done = false;
+  @Input() text: string;
+  @Input() done: boolean;
 
   onClick() {
+    if (this.done) {
+      return;
+    }
     this.done = true;
     console.log(`task ${this.text} done`);
   }

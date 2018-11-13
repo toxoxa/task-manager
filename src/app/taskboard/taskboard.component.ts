@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskComponent } from '../task/task.component';
 
 @Component({
   selector: 'app-taskboard',
@@ -8,9 +7,32 @@ import { TaskComponent } from '../task/task.component';
 })
 export class TaskboardComponent implements OnInit {
 
-  constructor() { }
+  jobs: any;
+  constructor() {
+    this.jobs = [
+      {
+        text: 'Сделать дело, гулять смело',
+        done: false
+      },
+      {
+        text: 'Задача 1',
+        done: false
+      },
+      {
+        text: 'Задача 2',
+        done: false
+      },
+      {
+        text: 'Задача 3',
+        done: false
+      },
+      {
+        text: 'Задача 4',
+        done: false
+      }
+    ];
+  }
 
   ngOnInit() {
   }
-
 }

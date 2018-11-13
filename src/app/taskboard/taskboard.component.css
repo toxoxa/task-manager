@@ -1,0 +1,25 @@
+.taskboard__container {
+  width: 85%;
+  margin-top: 20px;
+  margin-left: 4%;
+}
+.taskboard__label {
+  font-size: 26px;
+}
+.taskboard__in_work {
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px lawngreen;
+  margin-bottom: 10px;
+}
+.taskboard__in_work:hover {
+  box-shadow: 0 0 10px forestgreen;
+}
+.taskboard__done {
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px blue;
+}
+.taskboard__done:hover {
+  box-shadow: 0 0 10px darkblue;
+}

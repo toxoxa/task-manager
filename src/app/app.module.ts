@@ -17,6 +17,6 @@ import { TaskboardComponent } from './taskboard/taskboard.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent, HeaderComponent, TaskComponent]
+  bootstrap: [AppComponent, HeaderComponent, TaskboardComponent]
 })
 export class AppModule { }

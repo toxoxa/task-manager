@@ -6,8 +6,8 @@
   border-radius: 10px;
 }
 .task_button__in_work:hover {
-  background: green;
-  box-shadow: 0 0 10px green;
+  background: forestgreen;
+  box-shadow: 0 0 10px forestgreen;
 }
 .task_button__in_work {
   background: lawngreen;
