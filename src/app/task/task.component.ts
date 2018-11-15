@@ -1,11 +1,4 @@
-import { Component, Input } from '@angular/core';
-
-// @NgModule({
-//   imports: [],
-//   exports: [TaskComponent],
-//   declarations: [TaskComponent],
-//   providers: [],
-// })
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-task',
@@ -21,12 +14,14 @@ export class TaskComponent {
   @Input() done: boolean;
   @Input() id: number;
 
+  @Output() Clicked = new EventEmitter<number>();
+
   onClick() {
     if (this.done) {
       return;
     }
     this.done = true;
     console.log(`task ${this.text} with id ${this.id} done`);
+    this.Clicked.emit(this.id);
   }
-
 }

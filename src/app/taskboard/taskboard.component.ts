@@ -59,7 +59,6 @@ export class TaskboardComponent {
     this.jobsInWork = this.jobsInWork.filter(j => {
       return j.id !== id;
     });
-    //todo пока так
     job.done = true;
     this.jobsDone.push(job);
   }
