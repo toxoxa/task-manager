@@ -1,6 +1,6 @@
 <div [ngClass]="'taskboard__container'">
   <div [ngClass]="'taskboard__in_work'">
-    <div [ngClass]="'taskboard__label'">В работе</div>
+    <div [ngClass]="'taskboard__label'">В работе ({{ jobsInWork.length }}):</div>
     <div [ngClass]="'taskboard__task_container'">
       <ng-template ngFor let-job [ngForOf]="jobsInWork">
         <div *ngIf="!job.done">
@@ -15,7 +15,7 @@
     </div>
   </div>
   <div [ngClass]="'taskboard__done'">
-    <div [ngClass]="'taskboard__label'">Выполненные</div>
+    <div [ngClass]="'taskboard__label'">Выполненные ({{ jobsDone.length }}):</div>
     <div [ngClass]="'taskboard__task_container'">
       <ng-template ngFor let-job [ngForOf]="jobsDone">
         <div *ngIf="job.done">
