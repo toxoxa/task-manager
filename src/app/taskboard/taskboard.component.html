@@ -13,6 +13,10 @@
         </div>
       </ng-template>
     </div>
+    <div [ngClass]="['taskboard__add_task']">
+      <div [ngClass]="['tm__add_button_plus']" (click)="onAddTask(taskBody.value); taskBody.value=''">+</div>
+      <textarea [ngClass]="['tm__add_button_input']" #taskBody placeholder="Введите текст задачи"></textarea>
+    </div>
   </div>
   <div [ngClass]="'taskboard__done'">
     <div [ngClass]="'taskboard__label'">Выполненные ({{ jobsDone.length }}):</div>

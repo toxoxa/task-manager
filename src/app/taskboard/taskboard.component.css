@@ -23,3 +23,37 @@
 .taskboard__done:hover {
   box-shadow: 0 0 10px darkblue;
 }
+.taskboard__add_task {
+  display: flex;
+}
+.tm__add_button_plus {
+  margin: 2px 15px 0 4px;
+  width: 20px;
+  height: 20px;
+  background: gray;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 19px;
+  cursor: pointer;
+}
+.tm__add_button_plus:hover {
+  box-shadow: 0 0 10px black;
+}
+.tm__add_button_input {
+  width: 500px;
+  height: 21px;
+  font-size: 18px;
+  background: lightgray;
+  border-radius: 12px;
+  padding: 1px 10px;
+  outline:none;
+  resize: none;
+  font-family: sans-serif;
+}
+.tm__add_button_input:hover {
+  box-shadow: 0 0 2px gray;
+}
+.tm__add_button_input:focus {
+  background: #eae1e1;
+  box-shadow: 0 0 2px gray;
+}

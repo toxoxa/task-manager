@@ -12,9 +12,9 @@ export class TaskComponent {
 
   @Input() text: string;
   @Input() done: boolean;
-  @Input() id: number;
+  @Input() id: string;
 
-  @Output() Clicked = new EventEmitter<number>();
+  @Output() Clicked = new EventEmitter<string>();
 
   onClick() {
     if (this.done) {

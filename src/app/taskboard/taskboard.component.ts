@@ -14,27 +14,27 @@ export class TaskboardComponent {
       {
         text: 'Сделать дело, гулять смело',
         done: false,
-        id: 1
+        id: '1'
       },
       {
         text: 'Задача 1',
         done: false,
-        id: 2
+        id: '2'
       },
       {
         text: 'Задача 2',
         done: false,
-        id: 3
+        id: '3'
       },
       {
         text: 'Задача 3',
         done: false,
-        id: 4
+        id: '4'
       },
       {
         text: 'Задача 4',
         done: false,
-        id: 5
+        id: '5'
       }
     ];
 
@@ -42,12 +42,12 @@ export class TaskboardComponent {
       {
         text: 'Выполненная задача',
         done: true,
-        id: 13
+        id: '13'
       },
       {
         text: 'Выполненная не мной задача',
         done: true,
-        id: 14
+        id: '14'
       }
     ];
   }
@@ -61,5 +61,22 @@ export class TaskboardComponent {
     });
     job.done = true;
     this.jobsDone.push(job);
+  }
+
+  onAddTask(text) {
+    function guid() {
+      function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+          .toString(16)
+          .substring(1);
+      }
+      return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+    }
+
+    this.jobsInWork.push({
+      text,
+      done: false,
+      id: guid()
+    });
   }
 }
