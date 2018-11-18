@@ -73,7 +73,8 @@ export class TaskboardComponent {
       return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
     }
 
-    this.jobsInWork.push({
+    text = text.trim();
+    text.length && this.jobsInWork.push({
       text,
       done: false,
       id: guid()
