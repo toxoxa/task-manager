@@ -1,4 +1,5 @@
 <div [ngClass]="'task__container'">
   <div [ngClass]="{task_button: true, task_button__in_work: !done, task_button__done: done}" (click)="onClick()"></div>
   <div [ngClass]="{task_label: true, task_label__done: done}">{{ text }}</div>
+  <div [ngClass]="'task__remove_button'" (click)="onDelete()">Удалить</div>
 </div>

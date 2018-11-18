@@ -2,13 +2,14 @@
   <div [ngClass]="'taskboard__in_work'">
     <div [ngClass]="'taskboard__label'">В работе ({{ jobsInWork.length }}):</div>
     <div [ngClass]="'taskboard__task_container'">
-      <ng-template ngFor let-job [ngForOf]="jobsInWork">
+      <ng-template ngFor let-job [ngForOf]="jobsInWork" let-index="index">
         <div *ngIf="!job.done">
           <app-task
             [text]="job.text"
             [done]="job.done"
             [id]="job.id"
-            (Clicked)="onClick($event)">
+            (Clicked)="onClick($event)"
+            (Deleted)="DeleteTask(index, job.done)">
           </app-task>
         </div>
       </ng-template>
@@ -26,7 +27,8 @@
           <app-task
             [text]="job.text"
             [done]="job.done"
-            [id]="job.id">
+            [id]="job.id"
+            (Deleted)="DeleteTask(index, job.done)">
           </app-task>
         </div>
       </ng-template>

@@ -79,4 +79,12 @@ export class TaskboardComponent {
       id: guid()
     });
   }
+
+  DeleteTask(id, done) {
+    if (done) {
+      this.jobsDone.splice(id, 1);
+    } else {
+      this.jobsInWork.splice(id, 1);
+    }
+  }
 }
