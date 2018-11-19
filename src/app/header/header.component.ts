@@ -15,8 +15,7 @@ export class HeaderComponent {
   scrollTop() {
     const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
     if (top > 0) {
-      window.scrollBy(0, -100);
-      setTimeout(this.scrollTop(), 20);
+      window.scrollBy(0, -top);
     }
   }
 }
