@@ -52,7 +52,7 @@ export class TaskboardComponent {
     ];
   }
 
-  onClick(id) {
+  onChangeState(id) {
     const job = this.jobsInWork.filter(j => {
       return j.id === id;
     })[0];

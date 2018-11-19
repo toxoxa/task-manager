@@ -14,16 +14,16 @@ export class TaskComponent {
   @Input() done: boolean;
   @Input() id: string;
 
-  @Output() Clicked = new EventEmitter<string>();
+  @Output() StateChanged = new EventEmitter<string>();
   @Output() Deleted = new EventEmitter<string>();
 
-  onClick() {
+  onStateChanged() {
     if (this.done) {
       return;
     }
     this.done = true;
     console.log(`task ${this.text} with id ${this.id} done`);
-    this.Clicked.emit(this.id);
+    this.StateChanged.emit(this.id);
   }
 
   onDelete() {

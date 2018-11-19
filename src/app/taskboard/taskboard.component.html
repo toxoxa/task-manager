@@ -8,7 +8,7 @@
             [text]="job.text"
             [done]="job.done"
             [id]="job.id"
-            (Clicked)="onClick($event)"
+            (StateChanged)="onChangeState($event)"
             (Deleted)="DeleteTask(index, job.done)">
           </app-task>
         </div>
